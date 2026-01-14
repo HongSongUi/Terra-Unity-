@@ -15,7 +15,5 @@ Unity 기반 보스 전투 중심 액션 게임 프로젝트
 - BehaviorTree/ : 패턴 선택 액션 노드
 - Presentation/ : Camera, Cutscene 제어
 
-## Note
-포트폴리오 상세 설명 및 영상은 아래 링크 참고
 
-[노션 링크](https://pickled-saver-987.notion.site/Terra-2d323b8d49dc813baa16fcd3d76f0227)
+
