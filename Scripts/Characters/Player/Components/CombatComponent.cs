@@ -84,6 +84,7 @@ public class CombatComponent : MonoBehaviour
             // 버퍼 시간 내에 있는지 확인
             if (Time.time - _lastInputTime <= inputBufferTime)
             {
+
                 ExecuteNextCombo();
             }
             else
@@ -92,11 +93,12 @@ public class CombatComponent : MonoBehaviour
                 _nextAttackQueued = false;
             }
         }
+       // Debug.Log(_currentComboCount);
     }
     public void NormalAttack()
     {
         if (_isDead) return;
-   
+      
         _movementComponent.RotationToCameraDirection();
         if (!_isAttack)
         {
@@ -242,6 +244,7 @@ public class CombatComponent : MonoBehaviour
     }
     public void NormalAttackEnd()
     {
+        Debug.Log("호출");
         _isAttack = false;
         _comboState = false;
         _nextAttackQueued = false;
