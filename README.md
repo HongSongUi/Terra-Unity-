@@ -17,3 +17,5 @@ Unity 기반 보스 전투 중심 액션 게임 프로젝트
 
 
 
+## 상세 내용
+https://pickled-saver-987.notion.site/Terra-2e823b8d49dc804c964eed8175e76411
