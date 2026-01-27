@@ -76,9 +76,6 @@ public class PlayerInputManager : MonoBehaviour
 
     public void OnGuard(InputAction.CallbackContext context)
     {
-        // context.started -> 누른 순간
-        // context.performed -> 누르고 있는 동안
-        // context.canceled -> 뗐을 때
         SetPlayerGuard(context.performed || context.started); // 가드 유지
                                                               
         if (context.canceled) // context.canceled 시 원상복귀 처리

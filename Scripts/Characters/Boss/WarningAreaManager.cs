@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 [System.Serializable]
-public class PatternTelegraph
+public class PatternTelegraph // 패턴과 패턴에 대응하는 경고 바닥
 {
-    public PhaseTwo patternName;           // 또는 enum
+    public PhaseTwo patternName;          
     public FillWarningArea telegraph;
 }
 

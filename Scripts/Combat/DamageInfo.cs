@@ -5,7 +5,7 @@ using UnityEngine;
 public struct DamageInfo
 {
     public float DamageAmount;
-    public bool IsKnockbackAttack;
+    public bool IsKnockbackAttack; // player가 맞았을 때 true -> 날라감, false -> 움찔
 
     public DamageInfo(float damage, bool knockback)
     {

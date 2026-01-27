@@ -83,9 +83,7 @@ public class MovementComponent : MonoBehaviour
         {
             targetSpeed = 0.0f;
         }
-        // a reference to the players current horizontal velocity
 
-        //float currentHorizontalSpeed = new Vector3(_characterController.velocity.x, 0.0f, _characterController.velocity.z).magnitude;
 
         float inputMagnitude = 1f;
 
@@ -152,7 +150,7 @@ public class MovementComponent : MonoBehaviour
         // 넉백이 진행되는 동안 반복
         while (Time.time < startTime + duration)
         {
-            // 1. 시간에 따른 힘 감속 (Smooth Damping)
+            //  시간에 따른 감속 (Smooth Damping)
             float t = (Time.time - startTime) / duration; // 0에서 1까지 증가
             currentForce = Mathf.Lerp(initialForce, 0f, t);
 
@@ -165,7 +163,6 @@ public class MovementComponent : MonoBehaviour
             yield return null; // 다음 프레임까지 대기
         }
 
-        // 넉백 종료 후 처리 (예: 스탠딩 애니메이션 복귀 등)
         _knockbackRoutine = null;
     }
     public void SetPlayerDodgeState(bool state)

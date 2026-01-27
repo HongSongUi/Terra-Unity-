@@ -151,11 +151,10 @@ public class PlayerController : BaseCharacterController
     }
     public override void TakeDamage(DamageInfo damageInfo)
     {
-        
         _combatComponent.HandleIncomingDamage(damageInfo, _healthComponent);
     }
 
-    private void SetRollingAnimation()
+    private void SetRollingAnimation() // È¸ÇÇ±â
     {
         if (_combatComponent.IsSkilled) return;
         if (_combatComponent.IsAttack) _combatComponent.NormalAttackEnd();

@@ -12,7 +12,6 @@ public class SwordAttack : MonoBehaviour
     private float _swordDamage = 10;
 
     BoxCollider _boxCollider;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
     {

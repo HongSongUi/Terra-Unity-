@@ -30,16 +30,6 @@ public class HealthComponent : MonoBehaviour
         _currentHealth = _maxHealth;
         
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-   
-    }
     public virtual bool ApplyDamage(float damage)
     {
         if (Time.time - _lastDamageTime < _damageCooldown)

@@ -1,7 +1,7 @@
 using Unity.Behavior;
 using UnityEngine;
 
-// TODO : TestFunc 이름 바꾸기
+
 
 public class MonsterController : BaseCharacterController
 {
@@ -24,11 +24,11 @@ public class MonsterController : BaseCharacterController
     {
         base.Awake();
         _healthImg = GetComponent<HealthImageComponent>();
-        _sight.OnPlayerDetected += TestFun;
+        _sight.OnPlayerDetected += IsFindTarget;
     }
     private void OnDestroy()
     {
-        _sight.OnPlayerDetected -= TestFun;
+        _sight.OnPlayerDetected -= IsFindTarget;
     }
 
     void Start()
@@ -47,7 +47,7 @@ public class MonsterController : BaseCharacterController
     void Update()
     {
     }
-    private void TestFun(bool state)
+    private void IsFindTarget(bool state)
     {
         _isChase = state;
          _behaviorAgent.SetVariableValue("FindTarget", state);

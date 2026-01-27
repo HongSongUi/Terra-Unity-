@@ -6,7 +6,7 @@ public class MonsterAttackHandler : MonoBehaviour
     private BoxCollider _boxCollider;
     [SerializeField]
     private MonsterAnimationEventHandler _animationEventHandler;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     private void OnEnable()
     {
         _animationEventHandler.OnMonsterAttack += SetCollider;

@@ -33,8 +33,6 @@ public partial class BaseWeightRandomAction : Action
             {
                 return i;
             }
-                
-           
         }
         return 0;
     }

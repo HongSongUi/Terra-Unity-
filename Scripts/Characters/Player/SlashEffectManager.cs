@@ -32,12 +32,12 @@ public class SlashEffectManager : MonoBehaviour, IPoolable
     {
         _particleSystems = GetComponentsInChildren<ParticleSystem>();
         _duration = 0f;
-        foreach (var ps in _particleSystems)
+        foreach (var ps in _particleSystems) // 가장 긴 재생시간을 가져와서 저장
         {
             float psTime = ps.main.duration + ps.main.startLifetime.constantMax;
             if (psTime > _duration)
             {
-                _duration = psTime;
+                _duration = psTime; 
             }
         }
     }
@@ -49,15 +49,5 @@ public class SlashEffectManager : MonoBehaviour, IPoolable
         OnReturnToPool();
 
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

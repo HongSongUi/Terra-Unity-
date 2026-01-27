@@ -28,7 +28,6 @@ public class SkillRangeAttack : MonoBehaviour
             _hitColliders,
             _targetLayer
         );
-        Debug.Log( numHits );
         for (int i = 0; i < numHits; i++)
         {
             Collider targetCollider = _hitColliders[i];

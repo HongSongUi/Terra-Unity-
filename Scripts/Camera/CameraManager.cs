@@ -2,6 +2,8 @@ using Unity.Cinemachine;
 using UnityEngine;
 using static Unity.Cinemachine.CinemachineImpulseDefinition;
 
+// Camera Shake
+
 public class CameraManager : MonoBehaviour
 {
     private static CameraManager _instance;

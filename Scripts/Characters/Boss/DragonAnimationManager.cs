@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
 
+//애니메이션 이벤트 등록
+
 public class DragonAnimationManager : MonoBehaviour
 {
-    //애니메이션 이벤트 등록
 
 
     public event Action OnFireBallAttack;
@@ -94,6 +95,10 @@ public class DragonAnimationManager : MonoBehaviour
     {
         OnEarthShatter?.Invoke();
     }
+
+
+    /// Sound 호출
+    
     public void PlayScratchSound()
     {
         SoundManager.Instance.PlaySFX("Scratch");

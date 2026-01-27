@@ -21,7 +21,6 @@ public class EarthShatter : MonoBehaviour , IPoolable
     private bool _hasHit = false;
 
 
-   // private Coroutine _timerCoroutine;
     public IObjectPool<GameObject> Pool { get; set; }
     public void SetPool(IObjectPool<GameObject> pool)
     {
@@ -44,11 +43,10 @@ public class EarthShatter : MonoBehaviour , IPoolable
         Pool?.Release(gameObject);
 
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private IEnumerator LifeCycleRoutine()
     {
-        float expansionTime = _lifeTime - 2.5f;
+        float expansionTime = _lifeTime - 2.5f; // 조정용 수치
         float timer = 0f;
 
         while (timer < expansionTime)

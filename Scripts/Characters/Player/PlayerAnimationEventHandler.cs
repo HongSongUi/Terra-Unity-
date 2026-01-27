@@ -70,7 +70,7 @@ public class PlayerAnimationEventHandler : MonoBehaviour
     {
         OnPlayerHitAnimation?.Invoke(false);
     }
-    public void OnSwitchWeaponHandR()
+    public void OnSwitchWeaponHandR() // 무기를 왼손 -> 오른손으로 이동
     {
 
         _weapon.transform.SetParent(_weaponAnchorLeft, false);
@@ -80,7 +80,7 @@ public class PlayerAnimationEventHandler : MonoBehaviour
 
 
     }
-    public void OnSwitchWeaponHandL()
+    public void OnSwitchWeaponHandL()// 무기를 오른손 -> 왼손으로 이동
     {
         _weapon.transform.SetParent(_weaponAnchorRight, false);
         _weapon.transform.localPosition = Vector3.zero;
@@ -116,7 +116,7 @@ public class PlayerAnimationEventHandler : MonoBehaviour
     {
         OnStartSwordSkill?.Invoke();
     }
-
+    // Sound
     public void PlaySwordSFXOne()
     {
         SoundManager.Instance.PlaySFX("Sword1");

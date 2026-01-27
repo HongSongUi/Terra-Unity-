@@ -91,7 +91,6 @@ public class SightComponent : MonoBehaviour
     {
         if (_eyePosition == null)
         {
-            Debug.Log("eye position is None");
             return;
         }
         Gizmos.color = Color.red;

@@ -83,7 +83,7 @@ public class SwordSkill : MonoBehaviour , IPoolable
     private IEnumerator DissolveRoutine()
     {
         _isDissolving = true;
-        Material mat = _dissolveInstance; // 인스턴스 1회 생성 후 캐싱
+        Material mat = _dissolveInstance;
 
         while (_dissolveAmount < 1f)
         {

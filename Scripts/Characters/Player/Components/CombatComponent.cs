@@ -93,7 +93,7 @@ public class CombatComponent : MonoBehaviour
                 _nextAttackQueued = false;
             }
         }
-       // Debug.Log(_currentComboCount);
+
     }
     public void NormalAttack()
     {
@@ -244,7 +244,6 @@ public class CombatComponent : MonoBehaviour
     }
     public void NormalAttackEnd()
     {
-        Debug.Log("호출");
         _isAttack = false;
         _comboState = false;
         _nextAttackQueued = false;
@@ -303,15 +302,15 @@ public class CombatComponent : MonoBehaviour
     }
     private IEnumerator AttackBuffRoutine(float buffAmount, float duration)
     {
-        // 1. 버프 적용 (예: 1.0f + 0.5f = 1.5배 증가)
+        // 버프 적용 
         _currentDamageMultiplier += buffAmount;
         _sword.SetSwordDamage(FinalDamage);
 
 
-        // 2. 지정된 시간만큼 대기
+        //지정된 시간만큼 대기
         yield return new WaitForSeconds(duration);
 
-        // 3. 버프 해제
+        // 버프 해제
         _currentDamageMultiplier -= buffAmount;
         _sword.SetSwordDamage(FinalDamage);
 

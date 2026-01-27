@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BaseCharacterController : MonoBehaviour , IDamageable
+public class BaseCharacterController : MonoBehaviour , IDamageable // 모든 Character들이 상속받아서 사용
 {
     protected HealthComponent _healthComponent;
 
@@ -9,20 +9,9 @@ public class BaseCharacterController : MonoBehaviour , IDamageable
         _healthComponent = GetComponent<HealthComponent>();
         if (_healthComponent == null)
         {
-            Debug.Log("오류: HealthComponent를 찾을 수 없습니다! ' " +
+            Debug.Log("HealthComponent를 찾을 수 없습니다! ' " +
                            gameObject.name + " ' 오브젝트에 HealthComponent가 붙어 있는지 확인하세요.", this);
         }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public virtual void TakeDamage(DamageInfo damageInfo)
     {

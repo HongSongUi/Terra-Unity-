@@ -76,7 +76,7 @@ public class SoundManager : MonoBehaviour
         return newSource;
     }
 
-    #region BGM
+
     public void PlayBGM(string name, bool fade = false, float fadeTime = 1f)
     {
         if (!_soundDict.TryGetValue(name, out Sound sound))
@@ -140,8 +140,8 @@ public class SoundManager : MonoBehaviour
         _musicSource.Stop();
         _musicSource.volume = BgmVolume;
     }
-    #endregion
-    #region SFX
+
+
     public void PlaySFX(string name, float volumeMultiplier = 1f)
     {
         if (!_soundDict.TryGetValue(name, out Sound sound))
@@ -154,9 +154,8 @@ public class SoundManager : MonoBehaviour
         float finalVolume = sound.volume * SfxVolume * volumeMultiplier;
         source.PlayOneShot(sound.clip, finalVolume);
     }
-    #endregion
+  
 
-    #region Volume Control
     public void SetBGMVolume(float volume)
     {
         BgmVolume = Mathf.Clamp01(volume);
@@ -171,5 +170,5 @@ public class SoundManager : MonoBehaviour
     {
         SfxVolume = Mathf.Clamp01(volume);
     }
-    #endregion
+
 }

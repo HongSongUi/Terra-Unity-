@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class ProjectileBase : MonoBehaviour , IPoolable
+
+public class ProjectileBase : MonoBehaviour , IPoolable // µÂ∑°∞Ô¿« fireball base
 {
     [SerializeField]
     private PoolType _explosionEffectType;

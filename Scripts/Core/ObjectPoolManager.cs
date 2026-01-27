@@ -111,7 +111,6 @@ public class ObjectPoolManager : MonoBehaviour
         Destroy(obj);
     }
 
-    // Public API
     public GameObject Get(PoolType poolType)
     {
         if (_pools.TryGetValue(poolType, out var pool))
